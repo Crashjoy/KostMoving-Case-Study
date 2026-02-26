@@ -31,11 +31,7 @@ The client needed a way to provide accurate, real-time moving quotes based on tw
 
 ## 📸 Screenshots & Documentation
 
-| AI Image Recognition | Distance-Based Quote | Admin Dashboard |
-
-| :---: | :---: | :---: |
-
-| ![AI Detection Placeholder](https://via.placeholder.com/300x200?text=YOLO+Detection+UI) | ![Maps Placeholder](https://via.placeholder.com/300x200?text=Google+Maps+Integration) | ![Admin Placeholder](https://via.placeholder.com/300x200?text=Stakeholder+Dashboard) |
+| AI Image Recognition ![AI Detection Placeholder](assets/detect.jpg) | Distance-Based Quote ![Maps Placeholder](assets/quote.png) | Main Page ![MainPage Placeholder](assets/main.png) |
 
 ## 📈 Impact & Results
 
@@ -48,14 +44,3 @@ The client needed a way to provide accurate, real-time moving quotes based on tw
 - 💼 Aldiyar Baibogurov
 - 📧 abaibogurov@gmail.com
 - 🔗 [LinkedIn](https://www.linkedin.com/in/aldiyar-baibogurov/)
-
-## My Solution (The "Hustle"):
-- **AI Inventory Assessment:** I self-taught and integrated a Python-based YOLOv8 (You Only Look Once) object detection model. Users upload photos of their rooms, and the system automatically identifies and counts furniture items to estimate total volume.
-- **Dynamic Pricing Engine:** Integrated Google Maps API to calculate precise travel distances and travel times, feeding this data into a custom C# pricing algorithm.
-- **Robust Backend:** Architected using ASP.NET MVC with a PostgreSQL database for reliable data persistence and complex relational queries.
-- **Modern DevOps:** Containerized the entire environment using Docker to ensure seamless transitions between development and future production deployment.
-
-## Key Technical Features:
-- **RESTful API:** Facilitates communication between the C# web server and the Python AI microservice.
-- **Responsive UI:** Built with Bootstrap to ensure customers can easily request quotes from their mobile devices while standing in the rooms they are moving.
-- **Security:** Implemented secure data handling for client contact information and move details.
