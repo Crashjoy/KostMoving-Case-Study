@@ -1,46 +1,48 @@
-# 🚛 KostMoving - AI-Powered Logistics & Quoting Platform
+# KostMoving — AI-Powered Moving Quote Platform
 
-## 📋 Project Overview:
+A custom web solution for a local moving business that automates the quoting
+process with AI-powered inventory assessment and real-time distance-based
+pricing.
 
-KostMoving is a custom web solution developed for a local moving business to automate customer engagement and streamline the moving quote process. The project’s primary goal was to replace manual inventory assessments with an AI-driven, automated workflow.
+## What it does
 
-## 🚀 The Challenge:
+The client's problem: moving quotes depend on two hard-to-estimate factors —
+the volume of items being moved and the travel distance. Manual estimates were
+slow and error-prone. This platform automates both.
 
-The client needed a way to provide accurate, real-time moving quotes based on two complex variables: the volume of items (inventory) and the travel distance. Manual estimation was slow and prone to human error.
+- Customers upload photos of their items; a YOLO object-detection model
+  identifies and categorizes the inventory automatically
+- Google Maps API calculates travel distances in real time for accurate,
+  distance-based pricing
+- A private admin dashboard lets the business owner manage quotes, track
+  milestones, and stay in touch with clients
+- The whole thing runs as three connected pieces: a customer-facing quoting
+  site, a private admin app, and a REST API linking them together
 
-## ✨ Key Features:
-- 🤖 **AI Inventory Assessment:** Integrated a Python-based YOLO (You Only Look Once) model via a RESTful API to automatically identify and categorize household items from customer-uploaded photos.
-- 📍 **Dynamic Pricing Engine:** Implemented the Google Maps API to calculate real-time, distance-based pricing and optimized routing for service requests.
-- 📊 **Stakeholder Dashboard:** Built a secure administrative backend for the business owner to manage quotes, track service milestones, and communicate with clients.
-- 🔐 **Secure API Management:** Implemented best practices for API versioning, monitoring, and lifecycle control to ensure the AI model and mapping services remained stable and secure.
+## Tech stack
 
-## 🛠️ Tech Stack:
-- **Frontend:** HTML, CSS, JavaScript, Bootstrap
-- **Backend:** ASP.NET Core MVC (C#), Python (Flask/FastAPI for AI microservice)
-- **AI/ML:** YOLO (You Only Look Once) Object Detection
-- **Database:** SQLite (Entity Framework Core)
-- **APIs:** Google Maps API, Custom RESTful AI API
-- **Communication:** Microsoft Teams (for stakeholder delivery)
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: C#, ASP.NET Core MVC, Entity Framework Core
+- AI: Python-based YOLO object detection served as a REST microservice
+- Database: SQLite
+- APIs: Google Maps API, custom RESTful AI API
 
-## 🏗️ System Architecture (High-Level)
+## How the pieces fit
 
-- **Client Layer:** Responsive web interface for photo uploads and quote requests.
-- **Logic Layer:** ASP.NET Core handles business logic and orchestrates calls to external services.
-- **AI Microservice:** A standalone Python service running the YOLO model to process images and return JSON-formatted inventory data.
-- **Data Layer:** SQLite manages persistent client data, quote history, and service logs.
+- **Customer site** — photo uploads and quote requests
+- **Admin app** — secure dashboard for managing quotes and operations
+- **REST API** — orchestrates communication between the apps and the AI service
+- **AI microservice** — standalone Python service running YOLO, returning
+  JSON-formatted inventory data
 
-## 📸 Screenshots & Documentation
+## What I'd highlight
 
-| AI Image Recognition ![AI Detection Placeholder](assets/detect.jpg) | Distance-Based Quote ![Maps Placeholder](assets/quote.png) | Main Page ![MainPage Placeholder](assets/main.png) |
+- The hardest part was the AI integration: I'd never done image recognition
+  before, so I learned YOLO from scratch and figured out how to make a Python
+  service talk to the C# app through a REST API — and got it working end-to-end
+- Worked directly with the client to gather requirements, troubleshoot, and
+  deliver from initial build through completion
 
-## 📈 Impact & Results
+## Screenshots
 
-- **Automation:** Successfully automated the initial inventory assessment, reducing manual data entry for the client.
-- **Accuracy:** Improved quote precision by using real-time distance calculations and standardized AI item recognition.
-- **Service Delivery:** Maintained 100% project milestone transparency through regular stakeholder updates via Microsoft Teams.
-
-# 📬 Contact
-
-- 💼 Aldiyar Baibogurov
-- 📧 abaibogurov@gmail.com
-- 🔗 [LinkedIn](https://www.linkedin.com/in/aldiyar-baibogurov/)
+| **AI Image Recognition** ![AI Detection Placeholder](assets/detect.jpg) | **Distance-Based Quote** ![Maps Placeholder](assets/quote.png) | **Main Page** ![MainPage Placeholder](assets/main.png) |
